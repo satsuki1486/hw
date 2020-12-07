@@ -17,10 +17,31 @@ namespace DotNet2020
             //            var directions = new[] { 0, 1, 0, 1, 0 };
             //            var time = new[] { 1, 1 };
             //            var directions = new[] { 1, 1 };
-            var time = new[] { 1, 2, 4 };
-            var directions = new[] { 0, 1, 1 };
-            var result = Turstile.Turn(time, directions);
-
+            //            var time = new[] { 1, 2, 4 };
+            //            var directions = new[] { 0, 1, 1 };
+            // Connected Components
+            var itemAssociation1 = new List<PairString>
+            {
+                new PairString("item1", "item2"),
+                new PairString("item3", "item4"),
+                new PairString("item4", "item5")
+            };
+            var itemAssociation2 = new List<PairString>
+            {
+                new PairString("item1", "item2"),
+                new PairString("item6", "item7"),
+                new PairString("item6", "item8"),
+                new PairString("item3", "item4"),
+                new PairString("item4", "item5"),
+            };
+            var itemAssociation3 = new List<PairString>
+            {
+                new PairString("item1", "item2"),
+                new PairString("item4", "item5"),
+                new PairString("item3", "item4"),
+                new PairString("item1", "item4")
+            };
+            var result = LargestItemAssociation.Execute(itemAssociation2);
         }
     }
 }
