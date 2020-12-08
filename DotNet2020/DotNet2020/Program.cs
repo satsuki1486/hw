@@ -59,11 +59,85 @@ namespace DotNet2020
             //            var start = new[] { 1, 4, 2 };
             //            var end = new[] { 3, 7, 7 };
             //            // Output is [0, 0, 0]
-            var str = "||||||||||";
-            var start = new[] { 1, 4, 2 };
-            var end = new[] { 3, 7, 7 };
-            // Output is [0, 0, 0]
-            var result = ItemsInContainers.GetItemsInContainer(str, start, end);
+            //            var str = "||||||||||";
+            //            var start = new[] { 1, 4, 2 };
+            //            var end = new[] { 3, 7, 7 };
+            //            // Output is [0, 0, 0]
+            //            var result = ItemsInContainers.GetItemsInContainer(str, start, end);
+            //            // Amazon Fresh Promo
+            //            var codeList1 = new[] { new []{ "apple", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart1 = new[] { "orange", "apple", "apple", "banana", "orange", "banana" };
+            //            var codeList2 = new[] { new[] { "apple", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart2 = new[] { "banana", "orange", "banana", "apple", "apple" };
+            //            var codeList3 = new[] { new[] { "apple", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart3 = new[] { "apple", "banana", "apple", "banana", "orange", "banana" };
+            //            var codeList4 = new[] { new[] { "apple", "apple" }, new[] { "apple", "apple", "banana" } };
+            //            var shoppingCart4 = new[] { "apple", "apple", "apple", "banana" };
+            //            var codeList5 = new[] { new[] { "apple", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart5 = new[] { "orange", "apple", "apple", "banana", "orange", "banana" };
+            //            var codeList6 = new[] { new[] { "apple", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart6 = new[] { "apple", "apple", "orange", "orange", "banana", "apple", "banana", "banana" };
+            //            var codeList7 = new[] { new[] { "anything", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart7 = new[] { "orange", "grapes", "apple", "orange", "orange", "banana", "apple", "banana", "banana" };
+            //            var codeList8 = new[] { new[] { "apple", "orange" }, new[] { "orange", "banana", "orange" } };
+            //            var shoppingCart8 = new[] { "apple", "orange", "banana", "orange", "orange", "banana", "orange", "grape" };
+            //            var codeList9 = new[] { new[] { "anything", "anything", "anything", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart9 = new[] { "orange", "apple", "banana", "orange", "apple", "orange", "orange", "banana", "apple", "banana" };
+            //            var codeList10 = new[] { new[] { "anything", "apple" }, new[] { "banana", "anything", "banana" } };
+            //            var shoppingCart10 = new[] { "orange", "grapes", "apple", "orange", "orange", "banana", "apple", "banana", "banana" };
+            //            var result1 = AmazonFreshPromotion.Execute(codeList1, shoppingCart1);
+            //            var result2 = AmazonFreshPromotion.Execute(codeList2, shoppingCart2);
+            //            var result3 = AmazonFreshPromotion.Execute(codeList3, shoppingCart3);
+            //            var result4 = AmazonFreshPromotion.Execute(codeList4, shoppingCart4);
+            //            var result5 = AmazonFreshPromotion.Execute(codeList5, shoppingCart5);
+            //            var result6 = AmazonFreshPromotion.Execute(codeList6, shoppingCart6);
+            //            var result7 = AmazonFreshPromotion.Execute(codeList7, shoppingCart7);
+            //            var result8 = AmazonFreshPromotion.Execute(codeList8, shoppingCart8);
+            //            var result9 = AmazonFreshPromotion.Execute(codeList9, shoppingCart9);
+            //            var result10 = AmazonFreshPromotion.Execute(codeList10, shoppingCart10);
+            // Prime Air Routes
+            //            var max = 7000;
+            //            var forward = new List<PairInt>
+            //            {
+            //                new PairInt(1, 2000),
+            //                new PairInt(2, 4000),
+            //                new PairInt(3, 6000),
+            //            };
+            //            var back = new List<PairInt>
+            //            {
+            //                new PairInt(1, 2000),
+            //            };
+            //            var max = 10000;
+            //            var forward = new List<PairInt>
+            //            {
+            //                new PairInt(1, 3000),
+            //                new PairInt(2, 5000),
+            //                new PairInt(3, 7000),
+            //                new PairInt(4, 10000),
+            //            };
+            //            var back = new List<PairInt>
+            //            {
+            //                new PairInt(1, 2000),
+            //                new PairInt(2, 3000),
+            //                new PairInt(3, 4000),
+            //                new PairInt(4, 5000),
+            //            };
+            var max = 10000;
+            var forward = new List<PairInt>
+            {
+                new PairInt(1, 3000),
+                new PairInt(2, 5000),
+                new PairInt(3, 7000),
+                new PairInt(4, 10000),
+            };
+            var back = new List<PairInt>
+            {
+                new PairInt(1, 2000),
+                new PairInt(2, 3000),
+                new PairInt(3, 4000),
+                new PairInt(4, 5000),
+            };
+            var result = PrimeAirRoute.GetOptimizedUtilize(max, forward, back);
         }
     }
 }
