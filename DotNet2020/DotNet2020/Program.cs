@@ -122,22 +122,27 @@ namespace DotNet2020
             //                new PairInt(3, 4000),
             //                new PairInt(4, 5000),
             //            };
-            var max = 10000;
-            var forward = new List<PairInt>
-            {
-                new PairInt(1, 3000),
-                new PairInt(2, 5000),
-                new PairInt(3, 7000),
-                new PairInt(4, 10000),
-            };
-            var back = new List<PairInt>
-            {
-                new PairInt(1, 2000),
-                new PairInt(2, 3000),
-                new PairInt(3, 4000),
-                new PairInt(4, 5000),
-            };
-            var result = PrimeAirRoute.GetOptimizedUtilize(max, forward, back);
+            //            var max = 10000;
+            //            var forward = new List<PairInt>
+            //            {
+            //                new PairInt(1, 3000),
+            //                new PairInt(2, 5000),
+            //                new PairInt(3, 7000),
+            //                new PairInt(4, 10000),
+            //            };
+            //            var back = new List<PairInt>
+            //            {
+            //                new PairInt(1, 2000),
+            //                new PairInt(2, 3000),
+            //                new PairInt(3, 4000),
+            //                new PairInt(4, 5000),
+            //            };
+            // Shopping Pattern
+            //            var fromProduct = new List<int>{ 1, 2, 2, 3, 4, 5 };
+            //            var toProduct = new List<int> { 2, 4, 5, 5, 5, 6 };
+            var fromProduct = new List<int> { 1, 1, 2, 2, 3, 4 };
+            var toProduct = new List<int> { 2, 3, 3, 4, 4, 5 };
+            var result = ShoppingPatterns.MinProductSum(6, fromProduct, toProduct);
         }
     }
 }
