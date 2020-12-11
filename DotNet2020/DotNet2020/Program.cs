@@ -140,9 +140,16 @@ namespace DotNet2020
             // Shopping Pattern
             //            var fromProduct = new List<int>{ 1, 2, 2, 3, 4, 5 };
             //            var toProduct = new List<int> { 2, 4, 5, 5, 5, 6 };
-            var fromProduct = new List<int> { 1, 1, 2, 2, 3, 4 };
-            var toProduct = new List<int> { 2, 3, 3, 4, 4, 5 };
-            var result = ShoppingPatterns.MinProductSum(6, fromProduct, toProduct);
+            //            var fromProduct = new List<int> { 1, 1, 2, 2, 3, 4 };
+            //            var toProduct = new List<int> { 2, 3, 3, 4, 4, 5 };
+            //            var result = ShoppingPatterns.MinProductSum(6, fromProduct, toProduct);
+            // Distance between nodes
+            //            var arr = new int[] {2, 1, 3};
+            //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 4);
+            //            var arr = new int[] { 4, 6, 9, 11, 1, 2, 5, 7 };
+            //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 7);
+            var arr = new int[] { 24, 6, 2, 22, 30, 25, 20, 15, 7, 8, 10, 9, 1 };
+            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 9);
         }
     }
 }
