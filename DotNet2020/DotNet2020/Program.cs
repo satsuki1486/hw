@@ -148,8 +148,17 @@ namespace DotNet2020
             //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 4);
             //            var arr = new int[] { 4, 6, 9, 11, 1, 2, 5, 7 };
             //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 7);
-            var arr = new int[] { 24, 6, 2, 22, 30, 25, 20, 15, 7, 8, 10, 9, 1 };
-            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 9);
+            //            var arr = new int[] { 24, 6, 2, 22, 30, 25, 20, 15, 7, 8, 10, 9, 1 };
+            //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 9);
+            // Treasure Island
+            var arr = new[]
+            {
+                new [] {'O', 'O', 'O', 'O'},
+                new [] {'D', 'O', 'D', 'O'},
+                new [] {'O', 'O', 'O', 'O'},
+                new [] {'X', 'D', 'D', 'O'},
+            };
+            var result = TreasureIsland.Distance(arr);
         }
     }
 }
