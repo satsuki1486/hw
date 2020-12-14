@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DotNet2020.FB;
 using DotNet2020.Yamaxun;
 
 namespace DotNet2020
@@ -151,14 +152,50 @@ namespace DotNet2020
             //            var arr = new int[] { 24, 6, 2, 22, 30, 25, 20, 15, 7, 8, 10, 9, 1 };
             //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 9);
             // Treasure Island
-            var arr = new[]
+//            var arr = new[]
+//            {
+//                new [] {'O', 'O', 'O', 'O'},
+//                new [] {'D', 'O', 'D', 'O'},
+//                new [] {'O', 'O', 'O', 'O'},
+//                new [] {'X', 'D', 'D', 'O'},
+//            };
+//            var result = TreasureIsland.Distance(arr);
+            // TreeWithMultipleParents
+            var input = new List<int[]>
             {
-                new [] {'O', 'O', 'O', 'O'},
-                new [] {'D', 'O', 'D', 'O'},
-                new [] {'O', 'O', 'O', 'O'},
-                new [] {'X', 'D', 'D', 'O'},
+                new int[] {1, 2},
+                new int[] {1, 3},
+                new int[] {2, 4},
+                new int[] {2, 5},
+                new int[] {3, 6},
+                new int[] {5, 6},
             };
-            var result = TreasureIsland.Distance(arr);
+            var input1 = new List<int[]>
+            {
+                new int[] {1, 2},
+                new int[] {2, 3},
+                new int[] {3, 4},
+            };
+
+            var input2 = new List<int[]>
+            {
+                new int[] {1, 2},
+                new int[] {3, 4},
+            };
+
+            var result = TreeWithMultipleParents.FindZeroAndOneParent(input2);
+            // 1
+            var result1 = TreeWithMultipleParents.FindLCA(input, 4, 3);
+            // 1
+            var result2 = TreeWithMultipleParents.FindLCA(input, 2, 6);
+            // 1
+            var result3 = TreeWithMultipleParents.FindLCA(input, 1, 6);
+            // -1
+            var result4 = TreeWithMultipleParents.FindLCA(input, 10, 6);
+            // 5
+            var result5 = TreeWithMultipleParents.FindLCA(input, 5, 6);
+            // -1
+            var result6 = TreeWithMultipleParents.FindLCA(input2, 2, 4);
         }
     }
 }
