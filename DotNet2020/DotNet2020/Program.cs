@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DotNet2020.FB;
+using DotNet2020.Google;
 using DotNet2020.Yamaxun;
 
 namespace DotNet2020
@@ -152,50 +153,85 @@ namespace DotNet2020
             //            var arr = new int[] { 24, 6, 2, 22, 30, 25, 20, 15, 7, 8, 10, 9, 1 };
             //            var result = DistanceBetweenNodesInBST.BSTDistance(arr, 1, 9);
             // Treasure Island
-//            var arr = new[]
-//            {
-//                new [] {'O', 'O', 'O', 'O'},
-//                new [] {'D', 'O', 'D', 'O'},
-//                new [] {'O', 'O', 'O', 'O'},
-//                new [] {'X', 'D', 'D', 'O'},
-//            };
-//            var result = TreasureIsland.Distance(arr);
+            //            var arr = new[]
+            //            {
+            //                new [] {'O', 'O', 'O', 'O'},
+            //                new [] {'D', 'O', 'D', 'O'},
+            //                new [] {'O', 'O', 'O', 'O'},
+            //                new [] {'X', 'D', 'D', 'O'},
+            //            };
+            //            var result = TreasureIsland.Distance(arr);
             // TreeWithMultipleParents
-            var input = new List<int[]>
-            {
-                new int[] {1, 2},
-                new int[] {1, 3},
-                new int[] {2, 4},
-                new int[] {2, 5},
-                new int[] {3, 6},
-                new int[] {5, 6},
-            };
-            var input1 = new List<int[]>
-            {
-                new int[] {1, 2},
-                new int[] {2, 3},
-                new int[] {3, 4},
-            };
-
-            var input2 = new List<int[]>
-            {
-                new int[] {1, 2},
-                new int[] {3, 4},
-            };
-
-            var result = TreeWithMultipleParents.FindZeroAndOneParent(input2);
-            // 1
-            var result1 = TreeWithMultipleParents.FindLCA(input, 4, 3);
-            // 1
-            var result2 = TreeWithMultipleParents.FindLCA(input, 2, 6);
-            // 1
-            var result3 = TreeWithMultipleParents.FindLCA(input, 1, 6);
-            // -1
-            var result4 = TreeWithMultipleParents.FindLCA(input, 10, 6);
-            // 5
-            var result5 = TreeWithMultipleParents.FindLCA(input, 5, 6);
-            // -1
-            var result6 = TreeWithMultipleParents.FindLCA(input2, 2, 4);
+            //            var input = new List<int[]>
+            //            {
+            //                new int[] {1, 2},
+            //                new int[] {1, 3},
+            //                new int[] {2, 4},
+            //                new int[] {2, 5},
+            //                new int[] {3, 6},
+            //                new int[] {5, 6},
+            //            };
+            //            var input1 = new List<int[]>
+            //            {
+            //                new int[] {1, 2},
+            //                new int[] {2, 3},
+            //                new int[] {3, 4},
+            //            };
+            //
+            //            var input2 = new List<int[]>
+            //            {
+            //                new int[] {1, 2},
+            //                new int[] {3, 4},
+            //            };
+            //
+            //            var result = TreeWithMultipleParents.FindZeroAndOneParent(input2);
+            //            // 1
+            //            var result1 = TreeWithMultipleParents.FindLCA(input, 4, 3);
+            //            // 1
+            //            var result2 = TreeWithMultipleParents.FindLCA(input, 2, 6);
+            //            // 1
+            //            var result3 = TreeWithMultipleParents.FindLCA(input, 1, 6);
+            //            // -1
+            //            var result4 = TreeWithMultipleParents.FindLCA(input, 10, 6);
+            //            // 5
+            //            var result5 = TreeWithMultipleParents.FindLCA(input, 5, 6);
+            //            // -1
+            //            var result6 = TreeWithMultipleParents.FindLCA(input2, 2, 4);
+            // ComputerCoreAndTasks
+            //            var c1 = new int[] { 5, 6 };
+            //            var t1 = new int[] { 3, 3, 5 };
+            //            var c2 = new int[] { 2, 4 };
+            //            var t2 = new int[] { 1, 1, 4 };
+            //            var c3 = new int[] { 8, 10 };
+            //            var t3 = new int[] { 2, 3, 3, 3, 7 };
+            //            var c4 = new int[] { 1, 3 };
+            //            var t4 = new int[] { 2, 2 };
+            //            var c5 = new int[] { 10, 15 };
+            //            var t5 = new int[] { 8, 7, 6, 5 };
+            //            var result = ComputerCoreAndTasks.CanExecute(c1, t1, 0);
+            // Houses and heaters
+            //            var houses = new int[] { 1, 5 };
+            //            var heaters = new int[] { 2 };
+            //            var result = HousesAndHeaters.FindRadius(houses, heaters);
+            // Maximize Sum
+            //            var A = new int[] { -2, 8, 1, 15, -6 };
+            //            var B = new int[] { 3, 2, 5 };
+            //            var A = new int[] { 2, 13, 7, 15 };
+            //            var B = new int[] { 2, 3 };
+            //            var result = MaximizeSum.MaxSum(A, B, 0, 0, B.Length - 1);
+            // Course Schedule
+//            var input = new int [][]
+//            {
+//                new int[] {1, 0},
+//                new int[] {2, 0},
+//                new int[] {3, 2},
+//                new int[] {2, 4},
+//                new int[] {4, 3},
+//            };
+//            var result = CourseSchedule.CanFinish(5, input);
+            // Max Distance
+            var str = new[] { "1011000", "1011110", "1011111" };
+            var result = MaxDistance.Execute(str);
         }
     }
 }
