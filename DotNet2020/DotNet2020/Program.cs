@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using DotNet2020.Amazon;
 using DotNet2020.FB;
 using DotNet2020.Google;
 using DotNet2020.Yamaxun;
@@ -220,18 +221,26 @@ namespace DotNet2020
             //            var B = new int[] { 2, 3 };
             //            var result = MaximizeSum.MaxSum(A, B, 0, 0, B.Length - 1);
             // Course Schedule
-//            var input = new int [][]
-//            {
-//                new int[] {1, 0},
-//                new int[] {2, 0},
-//                new int[] {3, 2},
-//                new int[] {2, 4},
-//                new int[] {4, 3},
-//            };
-//            var result = CourseSchedule.CanFinish(5, input);
+            //            var input = new int [][]
+            //            {
+            //                new int[] {1, 0},
+            //                new int[] {2, 0},
+            //                new int[] {3, 2},
+            //                new int[] {2, 4},
+            //                new int[] {4, 3},
+            //            };
+            //            var result = CourseSchedule.CanFinish(5, input);
             // Max Distance
-            var str = new[] { "1011000", "1011110", "1011111" };
-            var result = MaxDistance.Execute(str);
+            //            var str = new[] { "1011000", "1011110", "1011111" };
+            //            var result = MaxDistance.Execute(str);
+            // Rover move
+            //            var result = RoverControl.RoverMove(4, new[] {"RIGHT", "DOWN", "LEFT", "LEFT", "DOWN"});
+            // GenerateOriginalArray
+            // {3, 4, 5, 1, 2}
+            // var result = GenerateOriginalArray.Gen(new[] {4, 4, 1, 1, 1});
+            // {3,5,1,4,2}
+//            var result = GenerateOriginalArray.Gen(new[] { 3, 4, 1, 2, 1 });
+            var result = Standups.NumberOfWays(9);
         }
     }
 }
