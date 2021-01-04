@@ -240,7 +240,13 @@ namespace DotNet2020
             // var result = GenerateOriginalArray.Gen(new[] {4, 4, 1, 1, 1});
             // {3,5,1,4,2}
 //            var result = GenerateOriginalArray.Gen(new[] { 3, 4, 1, 2, 1 });
-            var result = Standups.NumberOfWays(9);
+            var arr = new int[][]
+            {
+                new int[] {1, 2, 2},
+                new [] {2, 5, 15},
+                new [] {3, 5, 10}
+            };
+            var result = CPU.ExecuteTasks(arr);
         }
     }
 }
