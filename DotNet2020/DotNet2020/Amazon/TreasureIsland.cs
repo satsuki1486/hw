@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace DotNet2020.Yamaxun
+namespace DotNet2020.Amazon
 {
     public static class TreasureIsland
     {

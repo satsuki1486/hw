@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
-using NUnit.Framework.Internal;
+﻿using NUnit.Framework;
 
-namespace DotNet2020.Yamaxun
+namespace DotNet2020.Amazon
 {
     [TestFixture]
     public class FiveStarSellers

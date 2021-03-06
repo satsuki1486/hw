@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DotNet2020.Yamaxun
+﻿namespace DotNet2020.Amazon
 {
     class TopKFrequent
     {

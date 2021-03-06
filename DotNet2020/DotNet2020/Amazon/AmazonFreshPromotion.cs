@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotNet2020.Yamaxun
+namespace DotNet2020.Amazon
 {
     // Sliding window
     // https://leetcode.com/discuss/interview-question/932920/

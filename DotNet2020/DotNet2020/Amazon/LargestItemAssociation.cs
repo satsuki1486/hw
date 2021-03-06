@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DotNet2020.Yamaxun
+namespace DotNet2020.Amazon
 {
     //https://leetcode.com/discuss/interview-question/782606/
     public static class LargestItemAssociation
