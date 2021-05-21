@@ -32,9 +32,9 @@ namespace DotNet2020.DataStructure
             var j = 0;
             for (var i = 0; i < a.Length; i++)
             {
-                while (j > 0 && i != b[j])
+                while (j > 0 && a[i] != b[j])
                     j = next[j];
-                if (i == b[j])
+                if (a[i] == b[j])
                     j++;
                 if (j == b.Length)
                 {

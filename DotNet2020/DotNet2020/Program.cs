@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using DotNet2020.Amazon;
 using DotNet2020.DataStructure;
 using DotNet2020.FB;
 using DotNet2020.Google;
+using DotNet2020.HubSpot;
 
 namespace DotNet2020
 {
@@ -14,6 +16,7 @@ namespace DotNet2020
     {
         public static void Main(string[] args)
         {
+            var url = "http://localhost:8522/api/v1/work-queues?onlyManualRePrioritizationAllowedQueues=true";
             // Five star
             //            var result = FiveStar(new[] { new[] { 4, 4 }, new[] { 1, 2 }, new[] { 3, 6 } }, 77);
             //            System.Console.WriteLine(result);
@@ -241,14 +244,14 @@ namespace DotNet2020
             // {3, 4, 5, 1, 2}
             // var result = GenerateOriginalArray.Gen(new[] {4, 4, 1, 1, 1});
             // {3,5,1,4,2}
-//            var result = GenerateOriginalArray.Gen(new[] { 3, 4, 1, 2, 1 });
-//            var arr = new []
-//            {
-//                new [] {1,1,0,0,0},
-//                new [] { 1, 1, 0, 0, 0 },
-//                new [] { 0, 0, 0, 1, 1 },
-//                new [] { 0, 0, 0, 1, 1 }
-//            };
+            //            var result = GenerateOriginalArray.Gen(new[] { 3, 4, 1, 2, 1 });
+            //            var arr = new []
+            //            {
+            //                new [] {1,1,0,0,0},
+            //                new [] { 1, 1, 0, 0, 0 },
+            //                new [] { 0, 0, 0, 1, 1 },
+            //                new [] { 0, 0, 0, 1, 1 }
+            //            };
             //            var x = new Node
             //            {
             //                val = 1,
@@ -305,26 +308,26 @@ namespace DotNet2020
             //                    }
             //                }
             //            };
-//            var node = new ListNode
-//            {
-//                val = 3,
-//                next = new ListNode
-//                {
-//                    val = 5,
-////                    next = new ListNode
-////                    {
-////                        val = 3,
-////                        next = new ListNode
-////                        {
-////                            val = 4,
-////                            next = new ListNode
-////                            {
-////                                val = 5
-////                            }
-////                        }
-////                    }
-//                }
-//            };
+            //            var node = new ListNode
+            //            {
+            //                val = 3,
+            //                next = new ListNode
+            //                {
+            //                    val = 5,
+            ////                    next = new ListNode
+            ////                    {
+            ////                        val = 3,
+            ////                        next = new ListNode
+            ////                        {
+            ////                            val = 4,
+            ////                            next = new ListNode
+            ////                            {
+            ////                                val = 5
+            ////                            }
+            ////                        }
+            ////                    }
+            //                }
+            //            };
             //[[1,3,5,7],[10,11,16,20],[23,30,34,60]]
 
             var board1 = new int[][]
@@ -368,72 +371,74 @@ namespace DotNet2020
                 }
             };
             //var resutl = deserialize("[1[3[56]24]]");
-            var result1 = FindLongestWord("abpcplea", new []{ "ale", "apple", "monkey", "plea" });
+            /*
+             * "vmokgggqzp"
+[3,5,1]
+["kg","ggq","mo"]
+["s","so","bfr"]
+             */
+            var points = new List<IList<int>>
+            {
+                new List<int> {0, 0},
+                new List<int> {0, 2}
+            };
+            /*
+             * [1,2,4,5,3,6,7]
+                [4,5,2,6,7,3,1]
+             */
+            //var result1 = ConstructFromPrePost(new [] { 1, 2, 4, 5, 3, 6, 7 }, new [] { 4, 5, 2, 6, 7, 3, 1 });
         }
 
-        /*
-         * Complete the 'connectedSum' function below.
-         *
-         * The function is expected to return an INTEGER.
-         * The function accepts following parameters:
-         *  1. INTEGER n
-         *  2. STRING_ARRAY edges
-         */
-        //        public static List<int>[] connection;
-        //        public static HashSet<int> visited;
-        //        public static int connectedSum(int n, List<string> edges)
-        //        {
-        //            connection = new List<int>[n];
-        //            visited = new HashSet<int>();
-        //            foreach (var e in edges)
-        //            {
-        //                var edge = e.Split(',');
-        //                var from = int.Parse(edge[0]);
-        //                var to = int.Parse(edge[1]);
-        //                if (connection[from] == null)
-        //                    connection[from] = new List<int>();
-        //                connection[from].Add(to);
-        //            }
-        //            var result = 0;
-        //            for (var i = 0; i < n; i++)
-        //            {
-        //                if (!visited.Add(i))
-        //                    continue;
-        //                if (connection[i] == null || connection[i].Count == 0)
-        //                {
-        //                    result += 1;
-        //                }
-        //                else
-        //                {
-        //                    var sum = Dfs(i);
-        //                    result += (int)Math.Ceiling(Math.Sqrt((double)sum));
-        //                }
-        //            }
-        //            return result;
-        //        }
-        public static string FindLongestWord(string s, IList<string> dictionary)
+        /**
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation
+ * interface NestedInteger {
+ *
+ *     // Constructor initializes an empty nested list.
+ *     public NestedInteger();
+ *
+ *     // Constructor initializes a single integer.
+ *     public NestedInteger(int value);
+ *
+ *     // @return true if this NestedInteger holds a single integer, rather than a nested list.
+ *     bool IsInteger();
+ *
+ *     // @return the single integer that this NestedInteger holds, if it holds a single integer
+ *     // Return null if this NestedInteger holds a nested list
+ *     int GetInteger();
+ *
+ *     // Set this NestedInteger to hold a single integer.
+ *     public void SetInteger(int value);
+ *
+ *     // Set this NestedInteger to hold a nested list and adds a nested integer to it.
+ *     public void Add(NestedInteger ni);
+ *
+ *     // @return the nested list that this NestedInteger holds, if it holds a nested list
+ *     // Return null if this NestedInteger holds a single integer
+ *     IList<NestedInteger> GetList();
+ * }
+ */
+        private int max = 0;
+        public int DepthSumInverse(IList<NestedInteger> nestedList)
         {
-            dictionary = dictionary.OrderBy(d => d).ToList();
-            var result = "";
-            foreach (var str in dictionary)
-            {
-                var i = 0;
-                var j = 0;
-                while (i < s.Length && j < str.Length)
-                {
-                    if (s[i++] == str[j])
-                        j++;
-                }
-                if (j == str.Length)
-                {
-                    if (result.Length < str.Length || (result.Length == str.Length && string.Compare(result, str) > 0))
-                    {
-                        result = str;
-                    }
-                }
 
+            foreach (var nested in nestedList)
+            {
+                MaxDepth(nested, 0);
             }
-            return result;
+            Console.WriteLine(max);
+            return max;
+        }
+
+        public void MaxDepth(NestedInteger n, int curr)
+        {
+            curr++;
+            if (n == null || n.IsInteger())
+            {
+                max = Math.Max(max, curr);
+                return;
+            }
+            MaxDepth(n, curr);
         }
 
         public class MyComparer : IComparer<int>
@@ -475,6 +480,11 @@ namespace DotNet2020
                 val = _val;
                 children = _children;
             }
+        }
+
+        public class NestedInteger
+        {
+
         }
 
     }
